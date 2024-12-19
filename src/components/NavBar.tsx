@@ -44,13 +44,11 @@ const NavBar = () => {
       className="max-w-5xl md:mx-auto 
         rounded-2xl 
         backdrop-blur-lg 
-        bg-[#2E2D2D]
-        border border-white/[0.15]
+        bg-background/20
+        border border-white/[0.05]
         shadow-[0_8px_32px_0_rgba(0,0,0,0.26)]
-        supports-[backdrop-filter]:bg-white/[0.07]
         z-50
-        before:absolute before:inset-0 before:-z-10 before:rounded-2xl 
-        before:bg-gradient-to-b before:from-white/[0.006] before:to-white/[0.009] 
+        before:absolute before:inset-0 before:-z-10 before:rounded-2xl  
         before:backdrop-blur-lg
         transition-all duration-300
         mx-8
