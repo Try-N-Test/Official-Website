@@ -94,7 +94,7 @@ const NavBar = () => {
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white/90 hover:text-primary-400"
+          className="md:hidden text-white/90 text-center hover:text-primary-400"
         >
           <svg
             className="w-6 h-6"
@@ -142,7 +142,7 @@ const NavBar = () => {
             >
               <Link
                 href={item.href}
-                className="block text-white/90 hover:text-primary-400 transition-colors duration-300"
+                className="block text-center text-white/90 hover:text-primary-400 transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
