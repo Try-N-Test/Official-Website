@@ -7,7 +7,7 @@ import { FaDiscord } from "react-icons/fa6";
 import NavBar from "@/components/NavBar";
 import { V2, Outline } from "@/lib/fonts";
 import MotionDiv from "@/components/animations/MotionDiv";
-import AnimatedAurora from "../animations/AnimatedAurora";
+// import AnimatedAurora from "../animations/AnimatedAurora";
 import Link from "next/link";
 
 const Hero = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
       </MotionDiv>
 
       {/* Animated Background Aurora Effects */}
-      <AnimatedAurora />
+      {/* <AnimatedAurora /> */}
 
 
       {/* Main Content Container */}
