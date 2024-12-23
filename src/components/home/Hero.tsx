@@ -99,7 +99,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="h-2 bg-primary-400 w-56 md:w-[75rem] rounded-b-3xl mx-auto" />
+        <div className="h-2 bg-gradient-to-r from-primary-800 via-primary-400 to-primary-800 w-56 md:w-[75rem] rounded-b-3xl mx-auto" />
             <Image src={BottomGradient} alt="gradient" className="mx-auto relative -top-2 -z-10 h-max w-96 md:w-full" />
       </div>
     </div>
