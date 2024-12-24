@@ -95,8 +95,8 @@ export default function ProjectCard({
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: index * 0.3 + i * 0.1 }}
             >
-              <div className="w-6 h-6 border border-primary-400 rounded flex-shrink-0" />
-              <p className="text-primary-400/80">{feature}</p>
+              <feature.icon className="w-6 h-6 text-primary-400 flex-shrink-0" />
+              <p className="text-primary-400/80">{feature.title}</p>
             </motion.div>
           ))}
           <div>
