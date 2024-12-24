@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Banner from "@/components/home/Banner";
 import Hero from "@/components/home/Hero";
 import Projects from "@/components/home/Projects";
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Banner />
       <Projects />
+      <Footer />
     </main>
   );
 }
