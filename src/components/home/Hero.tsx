@@ -31,7 +31,7 @@ const Hero = () => {
 
 
       {/* Main Content Container */}
-      <div className="relative z-10 mx-auto max-w-9xl px-6 py-16 md:py-8">
+      <div className="relative z-10 mx-auto max-w-9xl px-6 pt-16 md:pt-8">
         <div className="relative rounded-[2.5rem] bg-transparent overflow-hidden border-background/20 border-2 py-8">
           <Image
             src={BackgroundImage}

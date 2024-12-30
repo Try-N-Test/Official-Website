@@ -28,7 +28,7 @@ const Slider = () => {
         translate: ['100%', 0, 0],
       },
     }}
-      className="mySwiper text-white w-[30vw] h-80"
+      className="mySwiper text-white w-[30vw]"
       spaceBetween={30}
       centeredSlides={true}
       autoplay={{
