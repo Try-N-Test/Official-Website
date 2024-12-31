@@ -2,12 +2,11 @@
 
 import Logo from "@/assets/Logo Full.png";
 import BackgroundFooter from "@/assets/background-Footer.png";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaDiscord, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-import { IoPaperPlane } from "react-icons/io5";
 import BottomGradient from "@/assets/radial-gradient.png";
+import FooterForm from "./shared/FooterForm";
 
 const Footer = () => {
   return (
@@ -77,60 +76,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Newsletter Subscription */}
-              <div className="space-y-4 col-span-1 md:col-span-3 rounded-[1.5rem] border border-primary-400/20 p-6">
-                <h3 className={`text-2xl text-white`}>
-                  Join Our Online Community
-                </h3>
-                <p className="text-white/80">
-                  Stay connected with our vibrant community! Get exclusive
-                  updates about projects, events, and opportunities to
-                  collaborate.
-                </p>
-                <form
-                  onSubmit={async (e) => {
-                    e.preventDefault();
-                    const formData = new FormData(e.currentTarget);
-                    const email = formData.get("email") as string;
+              <FooterForm />
 
-                    try {
-                      const response = await fetch("/api/spreadsheet", {
-                        method: "POST",
-                        headers: {
-                          "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({ email }),
-                      });
-
-                      if (response.ok) {
-                        alert("Thank you for subscribing!");
-                        (e.target as HTMLFormElement).reset();
-                      } else {
-                        alert("Something went wrong. Please try again.");
-                      }
-                    } catch (error) {
-                      console.error("Error:", error);
-                      alert("Something went wrong. Please try again.");
-                    }
-                  }}
-                  className="flex gap-2 flex-col md:flex-row"
-                >
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="Enter your Email"
-                    className="flex-1 rounded-full bg-transparent border border-white/20 px-4 py-2 text-white focus:outline-none focus:border-primary-400"
-                  />
-                  <Button
-                    type="submit"
-                    className="rounded-full bg-transparent border h-full my-auto border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-primary-900"
-                  >
-                    Subscribe
-                    <IoPaperPlane className="h-5 w-5" />
-                  </Button>
-                </form>
-              </div>
             </div>
 
             {/* Bottom Section - Now inside the background container */}
