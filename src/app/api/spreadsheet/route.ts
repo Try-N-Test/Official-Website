@@ -1,12 +1,10 @@
 import { google, sheets_v4 } from "googleapis";
 import { NextRequest, NextResponse } from "next/server";
 
-// Define the expected request body type
 interface RequestBody {
   email: string;
 }
 
-// Define a reusable function for Google Sheets authentication
 const authenticateGoogleSheets = async () => {
   const serviceAccountKey = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
 
@@ -30,7 +28,6 @@ const authenticateGoogleSheets = async () => {
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
-    // Parse and validate request body
     const body: RequestBody = await req.json();
     const { email } = body;
 
@@ -41,14 +38,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       );
     }
 
-    // Authenticate with Google Sheets API
     const sheets: sheets_v4.Sheets = await authenticateGoogleSheets();
 
-    // Google Sheet ID and range
-    const spreadsheetId = "1FsDcSX9M7H0oBRP4St-O6GIvG_c4GGEZ7ziF1CwKATI";
-    const range = "Sheet1!A:A"; // Automatically appends to the first empty row in column A
-
-    // Append the email to the Google Sheet
+    const spreadsheetId = process.env.GOOGLE_SPREADSHEET_ID;
+    const range = "Sheet1!A:A"; 
     await sheets.spreadsheets.values.append({
       spreadsheetId,
       range,
