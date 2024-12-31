@@ -45,7 +45,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     const sheets: sheets_v4.Sheets = await authenticateGoogleSheets();
 
     // Google Sheet ID and range
-    const spreadsheetId = "1FsDcSX9M7H0oBRP4St-O6GIvG_c4GGEZ7ziF1CwKATI"; // Replace with your Sheet ID
+    const spreadsheetId = "1FsDcSX9M7H0oBRP4St-O6GIvG_c4GGEZ7ziF1CwKATI";
     const range = "Sheet1!A:A"; // Automatically appends to the first empty row in column A
 
     // Append the email to the Google Sheet

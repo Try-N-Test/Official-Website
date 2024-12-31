@@ -32,7 +32,11 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-6 gap-12">
               {/* Logo and Description */}
               <div className="space-y-4 col-span-1 md:col-span-2">
-                <Image src={Logo} alt="TNT Logo" className="h-36 w-auto mx-auto md:mx-0" />
+                <Image
+                  src={Logo}
+                  alt="TNT Logo"
+                  className="h-36 w-auto mx-auto md:mx-0"
+                />
                 <p className="text-white/80 text-xl italic  text-center md:text-left md:ml-4">
                   Exploring, Innovating, Perfecting
                 </p>
@@ -40,7 +44,11 @@ const Footer = () => {
 
               {/* Pages Links */}
               <div className="space-y-4 col-span-1 pt-4">
-                <h3 className={`text-xl font-semibold text-center md:text-left text-white`}>Pages</h3>
+                <h3
+                  className={`text-xl font-semibold text-center md:text-left text-white`}
+                >
+                  Pages
+                </h3>
                 <div className="flex flex-col space-y-2">
                   <Link
                     href="/"
@@ -75,20 +83,53 @@ const Footer = () => {
                   Join Our Online Community
                 </h3>
                 <p className="text-white/80">
-                Stay connected with our vibrant community! Get exclusive updates 
-                about projects, events, and opportunities to collaborate.
+                  Stay connected with our vibrant community! Get exclusive
+                  updates about projects, events, and opportunities to
+                  collaborate.
                 </p>
-                <div className="flex gap-2 flex-col md:flex-row">
+                <form
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    const email = formData.get("email") as string;
+
+                    try {
+                      const response = await fetch("/api/spreadsheet", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ email }),
+                      });
+
+                      if (response.ok) {
+                        alert("Thank you for subscribing!");
+                        (e.target as HTMLFormElement).reset();
+                      } else {
+                        alert("Something went wrong. Please try again.");
+                      }
+                    } catch (error) {
+                      console.error("Error:", error);
+                      alert("Something went wrong. Please try again.");
+                    }
+                  }}
+                  className="flex gap-2 flex-col md:flex-row"
+                >
                   <input
                     type="email"
+                    name="email"
+                    required
                     placeholder="Enter your Email"
                     className="flex-1 rounded-full bg-transparent border border-white/20 px-4 py-2 text-white focus:outline-none focus:border-primary-400"
                   />
-                  <Button className="rounded-full bg-transparent border h-full my-auto border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-primary-900">
+                  <Button
+                    type="submit"
+                    className="rounded-full bg-transparent border h-full my-auto border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-primary-900"
+                  >
                     Subscribe
                     <IoPaperPlane className="h-5 w-5" />
                   </Button>
-                </div>
+                </form>
               </div>
             </div>
 
