@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "@/assets/Logo Full.png";
-import BackgroundFooter from "@/assets/background-footer.png";
+import BackgroundFooter from "@/assets/background-Footer.png";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaDiscord, FaLinkedin, FaXTwitter } from "react-icons/fa6";
