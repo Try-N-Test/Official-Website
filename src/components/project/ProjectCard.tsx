@@ -55,7 +55,7 @@ export default function ProjectCard({
         >
           <div className="flex items-start gap-4 mx-auto">
             <h3
-              className={`text-3xl text-gray-100 md:text-4xl font-bold whitespace-nowrap ${V2.className}`}
+              className={`text-3xl text-gray-100 md:text-4xl font-bold md:whitespace-nowrap ${V2.className}`}
             >
               Project <span className="text-primary-400">{project.name}</span>
             </h3>
@@ -63,7 +63,7 @@ export default function ProjectCard({
               {(index + 1).toString().padStart(2, "0")}
             </div>
           </div>
-          <p className="text-primary-400/80 text-lg leading-relaxed">
+          <p className="text-primary-400/80 text-sm md:text-lg leading-relaxed">
             {project.description}
           </p>
           <div className="flex flex-wrap items-center gap-2">
@@ -82,7 +82,7 @@ export default function ProjectCard({
         </motion.div>
 
         <motion.div
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 text-sm md:text-base"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: index * 0.3 }}
@@ -96,7 +96,7 @@ export default function ProjectCard({
               transition={{ duration: 0.3, delay: index * 0.3 + i * 0.1 }}
             >
               <feature.icon className="w-6 h-6 text-primary-400 flex-shrink-0" />
-              <p className="text-primary-400/80">{feature.title}</p>
+              <p className="text-primary-400/80 my-auto">{feature.title}</p>
             </motion.div>
           ))}
           <div>
