@@ -1,10 +1,10 @@
 import Logo from "@/assets/logo.png";
 import BackgroundImage from "@/assets/background-hero.png";
-import BottomGradient from '@/assets/radial-gradient.png'
+import BottomGradient from "@/assets/radial-gradient.png";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaDiscord } from "react-icons/fa6";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/shared/NavBar";
 import { V2, Outline } from "@/lib/fonts";
 import MotionDiv from "@/components/animations/MotionDiv";
 // import AnimatedAurora from "../animations/AnimatedAurora";
@@ -13,12 +13,9 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-background">
-      <div className="relative mt-8 z-50">
-        <NavBar />
-      </div>
       {/* Right Logo - Absolutely Positioned */}
       <MotionDiv
-        className="hidden md:absolute top-12 -right-64 h-[700px] w-[700px] z-20 lg:block"
+        className="hidden md:absolute -top-16 -right-64 h-[700px] w-[700px] z-20 lg:block"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
@@ -28,7 +25,6 @@ const Hero = () => {
 
       {/* Animated Background Aurora Effects */}
       {/* <AnimatedAurora /> */}
-
 
       {/* Main Content Container */}
       <div className="relative z-10 mx-auto max-w-9xl px-6 pt-16 md:pt-8">
@@ -81,26 +77,34 @@ const Hero = () => {
 
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   <Link href={"https://discord.gg/N8TnbbesBa"}>
-                  <Button className="bg-transparent hover:bg-primary-500/10 text-primary-400 border-primary-400 border rounded-full px-6 py-2 text-base" size={"lg"}>
-                    <FaDiscord className="h-5 w-5" />
-                    Join Us
-                  </Button>
+                    <Button
+                      className="bg-transparent hover:bg-primary-500/10 text-primary-400 border-primary-400 border rounded-full px-6 py-2 text-base"
+                      size={"lg"}
+                    >
+                      <FaDiscord className="h-5 w-5" />
+                      Join Us
+                    </Button>
                   </Link>
                   <Link href="#about">
-                  <Button
-                    variant="outline"
-                    className="bg-transparent hover:bg-white/10 hover:text-white text-white border-white border rounded-full px-6 py-2 text-base"  size={"lg"}
+                    <Button
+                      variant="outline"
+                      className="bg-transparent hover:bg-white/10 hover:text-white text-white border-white border rounded-full px-6 py-2 text-base"
+                      size={"lg"}
                     >
-                    Learn More
-                  </Button>
-                    </Link>
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </MotionDiv>
             </div>
           </div>
         </div>
         <div className="h-2 bg-gradient-to-r from-primary-800 via-primary-400 to-primary-800 w-56 md:w-[75rem] rounded-b-3xl mx-auto" />
-            <Image src={BottomGradient} alt="gradient" className="mx-auto relative -top-2 -z-10 h-max w-96 md:w-full" />
+        <Image
+          src={BottomGradient}
+          alt="gradient"
+          className="mx-auto relative -top-2 -z-10 h-max w-96 md:w-full"
+        />
       </div>
     </div>
   );

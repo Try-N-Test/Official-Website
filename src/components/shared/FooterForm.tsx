@@ -48,7 +48,7 @@ const FooterForm = () => {
   };
 
   return (
-    <div className="space-y-4 col-span-1 md:col-span-3 rounded-[1.5rem] border border-primary-400/20 p-6">
+    <div id="contact" className="space-y-4 col-span-1 md:col-span-3 rounded-[1.5rem] border border-primary-400/20 p-6">
       <h3 className={`text-2xl text-white`}>
         Join Our Online Community
       </h3>
