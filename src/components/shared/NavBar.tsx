@@ -9,10 +9,10 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Team", href: "#team" },
-    { name: "Journey", href: "#journey" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/#about" },
+    { name: "Team", href: "/#team" },
+    { name: "Journey", href: "/#journey" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const containerVariants = {
@@ -33,6 +33,7 @@ const NavBar = () => {
   };
 
   return (
+    <div className="relative mt-8 z-50">
     <motion.nav 
       initial="hidden"
       animate="visible"
@@ -152,6 +153,7 @@ const NavBar = () => {
         </div>
       </motion.div>
     </motion.nav>
+    </div>
   );
 };
 
