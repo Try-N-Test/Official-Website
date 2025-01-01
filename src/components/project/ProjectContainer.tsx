@@ -44,7 +44,7 @@ export default function ProjectsContainer() {
           ref={containerRef}
           className="h-[70vh] overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-black/20 scrollbar-thumb-primary-500"
         >
-          <div className="flex flex-col gap-20">
+          <div className="flex flex-col gap-8 md:gap-20">
             {projects.map((project, index) => (
               <motion.div key={project.id} style={{ y: transforms[index] }}>
                 <ProjectCard
