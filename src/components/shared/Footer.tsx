@@ -6,7 +6,8 @@ import Image from "next/image";
 import { FaDiscord, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import BottomGradient from "@/assets/radial-gradient.png";
-import FooterForm from "./shared/FooterForm";
+import FooterForm from "./FooterForm";
+import { footerLinks } from "@/data/footer";
 
 const Footer = () => {
   return (
@@ -49,35 +50,19 @@ const Footer = () => {
                   Pages
                 </h3>
                 <div className="flex flex-col space-y-2">
-                  <Link
-                    href="/"
-                    className="text-white/80 text-center md:text-left hover:text-primary-400"
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="text-white/80 text-center md:text-left hover:text-primary-400"
-                  >
-                    About Us
-                  </Link>
-                  <Link
-                    href="/projects"
-                    className="text-white/80 text-center md:text-left hover:text-primary-400"
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="text-white/80 text-center md:text-left hover:text-primary-400"
-                  >
-                    Get In Touch
-                  </Link>
+                  {footerLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="text-white/80 text-center md:text-left hover:text-primary-400"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
               <FooterForm />
-
             </div>
 
             {/* Bottom Section - Now inside the background container */}

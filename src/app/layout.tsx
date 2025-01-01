@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local"
+import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import NavBar from "@/components/shared/NavBar";
+import Footer from "@/components/shared/Footer";
 
 const monaSans = localFont({
   src: "./fonts/Mona-Sans.ttf",
@@ -21,10 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${monaSans.className} antialiased`}
-      >
+      <body className={`${monaSans.className} antialiased`}>
+        <NavBar />
         {children}
+        <Footer />
         <Toaster />
       </body>
     </html>
