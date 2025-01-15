@@ -18,7 +18,7 @@
     "googleapis": "^144.0.0",
     "lucide-react": "^0.468.0",
     "motion": "^11.14.4",
-    "next": "14.2.18",
+    "next": "14.2.21",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.4.0",
