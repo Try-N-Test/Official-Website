@@ -14,9 +14,9 @@ interface TeamMemberProps {
 
 const TeamMember = ({ imageUrl, name, designation, href }: TeamMemberProps) => {
   const [role1, role2] = designation.split(" & ");
-  
+
   return (
-    <PinContainer containerClassName="m-0 "  title={`Also: ${role2 || "Bhai akela hin kaafi h" }`} href={href}>
+    <PinContainer containerClassName="m-0 " title={`${role2 || "Bhai akela hin kaafi h"}`} href={href}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -85,42 +85,55 @@ const Teams = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className={`text-5xl text-white font-bold text-center mb-10 ${V2.className}`}>
+        <h2 className={`text-xl lg:text-5xl text-white font-bold text-center lg:mb-10 ${V2.className}`}>
           Meet Our <span className="text-teal-400">Team</span>
         </h2>
-        <div className="relative flex justify-center items-start min-h-[700px]">
-          <svg className="absolute w-full h-full top-0 left-0" viewBox="0 0 1000 1000">
+        <div className="lg:relative lg:flex justify-center items-start min-h-[700px]">
+          {/* <svg className="absolute w-full h-full top-0 left-0" viewBox="0 0 1000 1000">
             <line x1="500" y1="200" x2="300" y2="400" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="2" />
             <line x1="500" y1="200" x2="700" y2="400" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="2" />
             <line x1="300" y1="400" x2="200" y2="600" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="2" />
             <line x1="700" y1="400" x2="800" y2="600" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="2" />
             <line x1="200" y1="600" x2="800" y2="600" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="2" />
-          </svg>
+          </svg> */}
 
           {/* Top member (Team Lead) */}
-          <div className="absolute" style={{ top: '-5%', left: '50%', transform: 'translateX(-50%)' }}>
+
+          {/* Top member (Team Lead) */}
+          <div className="static lg:absolute lg:top-[-5%] lg:left-1/2 lg:transform lg:-translate-x-1/2">
             <TeamMember {...teamMembers[0]} />
           </div>
 
           {/* Left middle member */}
-          <div className="absolute" style={{ top: '20%', left: '20%' }}>
+          <div className="static lg:absolute lg:top-[20%] lg:left-[18%]">
             <TeamMember {...teamMembers[1]} />
           </div>
 
           {/* Right middle member */}
-          <div className="absolute" style={{ top: '20%', right: '20%' }}>
+          <div className="static lg:absolute lg:top-[20%] lg:right-[18%]">
             <TeamMember {...teamMembers[2]} />
           </div>
 
           {/* Bottom left member */}
-          <div className="absolute" style={{ bottom: '0%', left: '24%' }}>
+          <div className="static lg:absolute lg:bottom-0 lg:left-[24%]">
             <TeamMember {...teamMembers[4]} />
           </div>
 
           {/* Bottom right member */}
-          <div className="absolute" style={{ bottom: '0%', right: '24%' }}>
+          <div className="static lg:absolute lg:bottom-0 lg:right-[24%]">
             <TeamMember {...teamMembers[3]} />
           </div>
+          {/* Left middle member */}
+
+
+          {/* Right middle member */}
+
+
+          {/* Bottom left member */}
+
+
+          {/* Bottom right member */}
+
         </div>
       </div>
     </section>
