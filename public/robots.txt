@@ -1,0 +1,14 @@
+# Try N Test Foundation Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://tryntest.in/sitemap.xml
+
+# Disallow admin and private areas if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay for specific bots if needed
+# User-agent: Googlebot
+# Crawl-delay: 1
