@@ -6,7 +6,8 @@ import About from "@/components/home/About";
 
 export const metadata: Metadata = {
   title: "Try N Test Foundation | Open Source Community",
-  description: "Join Try N Test Foundation - a vibrant open-source community dedicated to innovation, learning, and collaboration. Explore our projects and be part of our growing developer ecosystem.",
+  description:
+    "Join Try N Test Foundation - a vibrant open-source community dedicated to innovation, learning, and collaboration. Explore our projects and be part of our growing developer ecosystem.",
   keywords: [
     "Try N Test Foundation",
     "Open Source",
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Try N Test Foundation | Open Source Community",
-    description: "Join our vibrant open-source community dedicated to innovation, learning, and collaboration.",
+    description:
+      "Join our vibrant open-source community dedicated to innovation, learning, and collaboration.",
     url: "https://tryntest.in",
     siteName: "Try N Test Foundation",
     locale: "en_US",
@@ -34,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Try N Test Foundation",
-    description: "Join our vibrant open-source community dedicated to innovation, learning, and collaboration.",
+    description:
+      "Join our vibrant open-source community dedicated to innovation, learning, and collaboration.",
     creator: "@tryntest",
     images: ["/image.png"],
   },
@@ -47,12 +50,14 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
+import Teams from "@/components/home/Teams";
+import Journey from "@/components/home/Journey";
 
 export default function Home() {
   return (
@@ -61,6 +66,8 @@ export default function Home() {
       <About />
       <Banner />
       <Projects />
+      <Teams />
+      <Journey />
     </main>
   );
 }
