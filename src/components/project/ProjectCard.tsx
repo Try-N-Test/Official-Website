@@ -55,7 +55,7 @@ export default function ProjectCard({
         >
           <div className="flex items-start gap-4 mx-auto">
             <h3
-              className={`text-3xl text-gray-100 md:text-4xl font-bold md:whitespace-nowrap ${V2.className}`}
+              className={`text-3xl text-gray-100 md:text-4xl font-bold ${V2.className}`}
             >
               Project <span className="text-primary-400">{project.name}</span>
             </h3>
