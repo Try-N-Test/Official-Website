@@ -6,20 +6,20 @@ interface RequestBody {
 }
 
 const authenticateGoogleSheets = async () => {
-  const serviceAccountKey = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
-
-  if (!serviceAccountKey) {
-    throw new Error("Google service account credentials are not set.");
-  }
-
-  const credentials = JSON.parse(serviceAccountKey);
-
-  if (!credentials.private_key) {
-    throw new Error("Invalid service account credentials.");
+  const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+  const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
+  const projectId = process.env.GOOGLE_PROJECT_ID;
+  
+  if (!privateKey || !clientEmail || !projectId) {
+    throw new Error("Google service account credentials are not properly set.");
   }
 
   const auth = new google.auth.GoogleAuth({
-    credentials,
+    credentials: {
+      private_key: privateKey,
+      client_email: clientEmail,
+      project_id: projectId,
+    },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 

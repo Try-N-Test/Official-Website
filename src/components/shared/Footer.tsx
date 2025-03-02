@@ -4,6 +4,7 @@ import Logo from "@/assets/Logo Full.png";
 import BackgroundFooter from "@/assets/background-Footer.png";
 import Image from "next/image";
 import { FaDiscord, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import BottomGradient from "@/assets/radial-gradient.png";
 import FooterForm from "./FooterForm";
@@ -70,7 +71,7 @@ const Footer = () => {
               <p>© 2024 Try N Test Foundation, Inc. All rights reserved</p>
               <div className="flex gap-6 text-primary-600">
                 <Link
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/try-n-test/"
                   className="hover:text-primary-400"
                 >
                   <FaLinkedin className="size-8" />
@@ -86,6 +87,12 @@ const Footer = () => {
                   className="hover:text-primary-400"
                 >
                   <FaDiscord className="size-8" />
+                </Link>
+                <Link
+                  href="mailto:tnt.tryntest@gmail.com"
+                  className="hover:text-primary-400"
+                >
+                  <MdEmail className="size-8" />
                 </Link>
               </div>
             </div>

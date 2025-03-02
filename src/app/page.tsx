@@ -5,48 +5,59 @@ import Projects from "@/components/home/Projects";
 import About from "@/components/home/About";
 
 export const metadata: Metadata = {
-  title: "Try N Test Foundation | Open Source Community",
+  title: "Try N Test Foundation | Expert Web Solutions & Developer Community",
   description:
-    "Join Try N Test Foundation - a vibrant open-source community dedicated to innovation, learning, and collaboration. Explore our projects and be part of our growing developer ecosystem.",
+    "Try N Test Foundation offers premium web development solutions and hosts a vibrant community of developers. Our expert team delivers custom websites, apps, and digital solutions while fostering collaboration and learning.",
   keywords: [
     "Try N Test Foundation",
-    "Open Source",
+    "Web Development",
+    "Freelance Web Solutions",
     "Developer Community",
-    "Software Development",
-    "Coding Projects",
-    "Tech Innovation",
+    "Custom Website Development",
+    "Tech Experts",
+    "Digital Solutions",
+    "Web Design",
+    "App Development",
+    "Professional Web Services",
+    "Coding Community",
+    "Developer Network",
+    "Web Experts India"
   ],
   openGraph: {
-    title: "Try N Test Foundation | Open Source Community",
+    title: "Try N Test Foundation | Expert Web Solutions & Developer Community",
     description:
-      "Join our vibrant open-source community dedicated to innovation, learning, and collaboration.",
+      "Premium web development services and a thriving developer community. Get expert solutions for your digital needs while connecting with passionate tech professionals.",
     url: "https://tryntest.in",
     siteName: "Try N Test Foundation",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/image.png",
+        url: "https://tryntest.in/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Try N Test Foundation Banner",
+        alt: "Try N Test Foundation - Web Experts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Try N Test Foundation",
+    title: "Try N Test Foundation | Expert Web Solutions",
     description:
-      "Join our vibrant open-source community dedicated to innovation, learning, and collaboration.",
+      "Premium web development services and a thriving developer community. Expert solutions for all your digital needs.",
     creator: "@tryntest",
-    images: ["/image.png"],
+    images: ["https://tryntest.in/twitter-image.png"],
   },
   alternates: {
     canonical: "https://tryntest.in",
+    languages: {
+      'en-US': 'https://tryntest.in',
+    },
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -55,7 +66,16 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "verify-code",
+    yandex: "verify-code",
+    yahoo: "verify-code",
+    other: {
+      me: ["support@tryntest.in"],
+    },
+  },
 };
+
 import Teams from "@/components/home/Teams";
 import Journey from "@/components/home/Journey";
 

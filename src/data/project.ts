@@ -3,11 +3,13 @@ import FirstAid from '@/assets/Projects/1.png'
 import HealthOptima from '@/assets/Projects/2.png'
 import Projecify from '@/assets/Projects/3.png'
 import AnuvaadSangam from '@/assets/Projects/4.png'
+import Anipedia from '@/assets/Projects/5.png'
 import { IconType } from 'react-icons';
 import { IoPeopleCircle, IoChatbubbleEllipsesOutline, IoNewspaperOutline } from "react-icons/io5";
 import { MdOutlineHealthAndSafety, MdAssignment, MdOutlineTrackChanges } from "react-icons/md";
 import { BiTransfer } from "react-icons/bi";
 import { BsTranslate } from "react-icons/bs";
+import { FaList, FaSearchengin } from 'react-icons/fa6';
 
 export interface Project {
     id: number;
@@ -96,6 +98,24 @@ export const projects: Project[] = [
       ],
       link: "https://github.com/dipesh2508/anuvaad-sangam",
       image: AnuvaadSangam
+    },
+    {
+      id: 5,
+      name: "Anipedia",
+      description: "An anime discovery platform featuring categorized shows by genre with ratings, episodes, and synopsis. Users can browse curated lists and search for their next anime.",
+      contributors: ["Isheta Aggarwal", "Kislay Gupta"],
+      features: [
+        {
+          title: "Anime Listing",
+          icon: FaList
+        },
+        {
+          title: "Search Animes",
+          icon: FaSearchengin
+        }
+      ],
+      link: "https://anipedia.tryntest.in/",
+      image: Anipedia
     }
   ];
   

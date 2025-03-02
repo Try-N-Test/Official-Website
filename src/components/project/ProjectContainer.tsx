@@ -34,7 +34,7 @@ export default function ProjectsContainer() {
     const transforms = [transform1, transform2, transform3, transform4];
   
     return (
-      <div className="relative px-2">
+      <div className="relative w-full px-2">
         <div className="absolute -right-4 top-0 bottom-0 w-4 flex flex-col justify-between pointer-events-none text-sm text-primary-400">
           <span>01</span>
           <span>{projects.length.toString().padStart(2, "0")}</span>
@@ -42,7 +42,7 @@ export default function ProjectsContainer() {
   
         <div
           ref={containerRef}
-          className="h-[70vh] overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-black/20 scrollbar-thumb-primary-500"
+          className="h-[70vh] overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-black/20 scrollbar-thumb-primary-500 w-full"
         >
           <div className="flex flex-col gap-8 md:gap-20">
             {projects.map((project, index) => (

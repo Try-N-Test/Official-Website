@@ -18,92 +18,103 @@ const Hero = () => {
         className="hidden md:absolute -top-16 -right-64 h-[700px] w-[700px] z-20 lg:block"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <Image src={Logo} alt="TNT Logo" fill className="object-contain" />
+        <Image src={Logo} alt="TNT Logo" fill className="object-contain opacity-90" />
       </MotionDiv>
 
-      {/* Animated Background Aurora Effects */}
-      {/* <AnimatedAurora /> */}
-
       {/* Main Content Container */}
-      <div className="relative z-10 mx-auto max-w-9xl px-6 pt-16 md:pt-8">
-        <div className="relative rounded-[2.5rem] bg-transparent overflow-hidden border-background/20 border-2 py-8">
+      <div className="relative z-10 mx-auto max-w-9xl px-6 md:pt-8">
+        <div className="relative rounded-[2.5rem] bg-transparent overflow-hidden border-background/20 border-2 py-12">
           <Image
             src={BackgroundImage}
             alt="Background"
             fill
-            className="object-cover"
+            className="object-cover opacity-80"
           />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/40" />
 
           {/* Content Wrapper */}
           <div className="relative px-8 py-8 z-30">
             <div className="flex flex-col items-center justify-between lg:flex-row">
               {/* Left Content */}
               <MotionDiv
-                className="text-center w-full md:mr-24" // Added w-full for full width centering
-                initial={{ opacity: 0, y: 20 }}
+                className="text-center w-full md:mr-24"
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1, ease: "easeOut" }}
               >
                 <div className="w-full mx-auto">
-                  <h1
-                    className={`mb-8 text-3xl md:text-6xl text-center font-bold tracking-wider text-white ${V2.className}`}
+                  <MotionDiv
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
                   >
-                    UNVEILING THE POWER
-                    <br />
-                    <div className="flex items-center justify-center gap-2">
-                      OF <span className="text-primary-800">TNT</span>
-                    </div>
-                  </h1>
+                    <h1 className={`mb-10 text-4xl md:text-7xl text-center font-bold tracking-wider text-white ${V2.className}`}>
+                      WHERE INNOVATION
+                      <br />
+                      <div className="flex items-center justify-center gap-3 mt-2">
+                        MEETS <span className="text-primary-800 relative">COMMUNITY</span>
+                      </div>
+                    </h1>
+                  </MotionDiv>
 
-                  <div
-                    className={`mb-12 w-full text-center mx-auto space-y-4 text-2xl md:text-4xl font-medium ${Outline.className}`}
+                  <MotionDiv
+                    className={`mb-14 w-full text-center mx-auto space-y-5 text-2xl md:text-4xl font-medium ${Outline.className}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
                   >
                     <p className="flex items-center justify-center gap-2">
-                      <span className="text-white">OUR</span>
-                      <span className="text-primary-600">TEAM</span>
+                      <span className="text-white">EXPERT</span>
+                      <span className="text-primary-600">DEVELOPERS</span>
                     </p>
                     <p className="flex items-center justify-center gap-2">
-                      <span className="text-white">OUR</span>
+                      <span className="text-white">IMPACTFUL</span>
                       <span className="text-primary-600">PROJECTS</span>
                     </p>
                     <p className="flex items-center justify-center gap-2">
-                      <span className="text-white">OUR</span>
-                      <span className="text-primary-600">FUTURE</span>
+                      <span className="text-white">LEARNING</span>
+                      <span className="text-primary-600">TOGETHER</span>
                     </p>
-                  </div>
+                  </MotionDiv>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center gap-4">
+                <MotionDiv
+                  className="flex flex-wrap items-center justify-center gap-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
                   <Link href={"https://discord.gg/N8TnbbesBa"}>
                     <Button
-                      className="bg-transparent hover:bg-primary-500/10 text-primary-400 border-primary-400 border rounded-full px-6 py-2 text-base"
+                      className="bg-primary-500/20 hover:bg-primary-500/30 text-primary-400 border-primary-400 border-2 rounded-full px-8 py-6 text-lg transition-all duration-300 hover:scale-105"
                       size={"lg"}
                     >
-                      <FaDiscord className="h-5 w-5" />
-                      Join Us
+                      <FaDiscord className="h-5 w-5 mr-2" />
+                      Join Community
                     </Button>
                   </Link>
-                  <Link href="#about">
+                  <Link href="contact">
                     <Button
                       variant="outline"
-                      className="bg-transparent hover:bg-white/10 hover:text-white text-white border-white border rounded-full px-6 py-2 text-base"
+                      className="bg-white/5 hover:bg-white/15 text-white border-white border-2 rounded-full px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:text-white"
                       size={"lg"}
                     >
-                      Learn More
+                      Work With Us
                     </Button>
                   </Link>
-                </div>
+                </MotionDiv>
               </MotionDiv>
             </div>
           </div>
         </div>
-        <div className="h-2 bg-gradient-to-r from-primary-800 via-primary-400 to-primary-800 w-56 md:w-[75rem] rounded-b-3xl mx-auto" />
+        <div className="h-2 bg-gradient-to-r from-primary-800 via-primary-400 to-primary-800 w-56 md:w-[75rem] rounded-b-3xl mx-auto blur-[1px]" />
         <Image
           src={BottomGradient}
           alt="gradient"
-          className="mx-auto relative -top-2 -z-10 h-max w-96 md:w-full"
+          className="mx-auto relative -top-2 -z-10 h-max w-96 md:w-full opacity-90"
         />
       </div>
     </div>
