@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ShineBorder } from "@/components/magicui/shine-border";
+import { ShineBorder } from "@/components/ui/shine-border";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -39,7 +39,7 @@ const journeyData = [
     id: 1,
     logo: XtremeLogo,
     location: "Virtual",
-    title: "Xtreme 18.0",
+    title: "IEEEXtreme 18.0",
     organiser: "IEEE",
     description: "University Rank 1, India Rank 25, Global Rank 158. An intense 24-hour programming competition.",
     link: "https://ieeextreme.org/ieeextreme-18-0-ranking/"
@@ -85,13 +85,13 @@ const journeyData = [
 
 export function Journey() {
   return (
-    <section className="bg-background py-24 select-auto">
+    <section id="journey" className="bg-background py-24 select-auto">
       <div className="container mx-auto px-6 max-w-7xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`text-4xl md:text-6xl text-center font-bold mb-16 ${V2.className} `}
+          className={`text-3xl md:text-5xl text-center font-bold mb-16 ${V2.className} `}
         >
           <span
             className={` text-white font-bold text-center lg:mb-10 ${V2.className}`}

@@ -1,18 +1,23 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "motion/react";
 import { V2 } from "@/lib/fonts";
 import { PinContainer } from "../ui/3d-pin";
+import Dipesh from "@/assets/Team/Dipesh.jpg";
+import Isheta from "@/assets/Team/Isheta.jpg";
+import Rajat from "@/assets/Team/Rajat.jpg";
+import Kislay from "@/assets/Team/Kislay.jpg";
+import Ankit from "@/assets/Team/Ankit.jpg";
 
 interface TeamMemberProps {
-  imageUrl: string;
+  image: StaticImageData;
   name: string;
   designation: string;
   href: string;
 }
 
-const TeamMember = ({ imageUrl, name, designation, href }: TeamMemberProps) => {
+const TeamMember = ({ image, name, designation, href }: TeamMemberProps) => {
   const [role1, role2] = designation.split(" & ");
 
   return (
@@ -33,7 +38,7 @@ const TeamMember = ({ imageUrl, name, designation, href }: TeamMemberProps) => {
           <div className="relative w-[120px] h-[120px] group-hover:ring-2 group-hover:ring-cyan-500/50 rounded-full transition-all duration-300">
             <div className="w-full h-full rounded-full overflow-hidden border-2 border-teal-400/20">
               <Image
-                src={imageUrl}
+                src={image}
                 alt={name}
                 fill
                 className="object-cover rounded-full w-full h-full"
@@ -57,31 +62,31 @@ const TeamMember = ({ imageUrl, name, designation, href }: TeamMemberProps) => {
 const Teams = () => {
   const teamMembers: TeamMemberProps[] = [
     {
-      imageUrl: "/image.png",
+      image: Dipesh,
       name: "Dipesh Ranjan",
       designation: "Team Lead & Full Stack Developer",
       href: "https://github.com/dipesh2508"
     },
     {
-      imageUrl: "/image.png",
+      image: Isheta,
       name: "Isheta Aggarwal",
       designation: "UI/UX Designer & Content Writer",
       href: "https://github.com/Isheta20"
     },
     {
-      imageUrl: "/image.png",
+      image: Rajat,
       name: "Rajat Srivastava",
       designation: "Backend Developer & DSA Expert",
       href: "https://github.com/Rajat4279"
     },
     {
-      imageUrl: "/image.png",
+      image: Kislay,
       name: "Kislay Gupta",
       designation: "Front End Developer & Mobile Developer",
       href: "https://github.com/kislay-gupta"
     },
     {
-      imageUrl: "/image.png",
+      image: Ankit,
       name: "Ankit Panigrahi",
       designation: "Devops Engineer & ML Programmer",
       href: "https://github.com/PanigrahiAnkit"
@@ -89,8 +94,8 @@ const Teams = () => {
   ];
 
   return (
-    <section className="py-8 md:py-24 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="pt-8 md:pt-12 relative overflow-hidden max-w-7xl mx-auto" id="team">
+      <div className="mx-auto px-4 relative z-10">
         <h2 className={`text-3xl lg:text-5xl text-white font-bold text-center lg:mb-10 ${V2.className}`}>
           Meet Our <span className="text-teal-400">Team</span>
         </h2>
@@ -109,12 +114,12 @@ const Teams = () => {
           </div>
 
           {/* Left middle member */}
-          <div className="mx-auto mb-4 lg:mb-0 lg:absolute lg:top-[20%] lg:left-[15%]">
+          <div className="mx-auto mb-4 lg:mb-0 lg:absolute lg:top-[20%] lg:left-[10%]">
             <TeamMember {...teamMembers[1]} />
           </div>
 
           {/* Right middle member */}
-          <div className="mx-auto mb-4 lg:mb-0 lg:absolute lg:top-[20%] lg:right-[15%]">
+          <div className="mx-auto mb-4 lg:mb-0 lg:absolute lg:top-[20%] lg:right-[10%]">
             <TeamMember {...teamMembers[2]} />
           </div>
 

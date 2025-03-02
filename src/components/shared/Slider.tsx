@@ -1,69 +1,60 @@
 "use client";
-// import React, { useRef, useState } from "react";
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import 'swiper/css/effect-creative';
+import "swiper/css/effect-creative";
 
 import { Autoplay, Navigation, EffectCreative } from "swiper/modules";
 import Image from "next/image";
-import dev from "../../assets/developer_work.jpg";
-import team from "../../assets/about us.png";
+import about1 from "@/assets/About/about1.jpg";
+import about2 from "@/assets/About/about2.jpg";
+import about3 from "@/assets/About/about3.jpg";
 
-import '../../styles/style.css';
+import "@/styles/style.css";
 
 const Slider = () => {
+  // Array of images to map through
+  const images = [
+    { src: about1, alt: "About image 1" },
+    { src: about2, alt: "About image 2" },
+    { src: about3, alt: "About image 3" },
+  ];
+
   return (
     <Swiper
-    grabCursor={true}
-    effect={'creative'}
-    creativeEffect={{
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ['100%', 0, 0],
-      },
-    }}
+      grabCursor={true}
+      effect={"creative"}
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      }}
       className="mySwiper text-white w-[30vw]"
       spaceBetween={30}
       centeredSlides={true}
       autoplay={{
-        delay: 2500,
+        delay: 5000, // Increased from 2500 to 5000 ms
         disableOnInteraction: false,
       }}
       navigation={true}
       modules={[Autoplay, Navigation, EffectCreative]}
     >
-      
-      <SwiperSlide className="rounded-xl">
-        <Image
-          src={team}
-          className="object-cover"
-          fill
-          alt="Picture of the author"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="rounded-xl">
-        <Image
-          src={dev}
-          className="object-cover"
-          fill
-          alt="Picture of the author"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="rounded-xl">
-        <Image
-          src={team}
-          className="object-cover"
-          fill
-          alt="Picture of the author"
-        />
-      </SwiperSlide>
-      
+      {images.map((image, index) => (
+        <SwiperSlide key={index} className="rounded-xl">
+          <Image
+            src={image.src}
+            className="object-cover"
+            fill
+            alt={image.alt}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

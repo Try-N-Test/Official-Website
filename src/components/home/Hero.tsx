@@ -24,7 +24,7 @@ const Hero = () => {
       </MotionDiv>
 
       {/* Main Content Container */}
-      <div className="relative z-10 mx-auto max-w-9xl px-6 pt-16 md:pt-12">
+      <div className="relative z-10 mx-auto max-w-9xl px-6 md:pt-8">
         <div className="relative rounded-[2.5rem] bg-transparent overflow-hidden border-background/20 border-2 py-12">
           <Image
             src={BackgroundImage}
@@ -96,7 +96,7 @@ const Hero = () => {
                       Join Community
                     </Button>
                   </Link>
-                  <Link href="#about">
+                  <Link href="contact">
                     <Button
                       variant="outline"
                       className="bg-white/5 hover:bg-white/15 text-white border-white border-2 rounded-full px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:text-white"
