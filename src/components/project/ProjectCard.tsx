@@ -57,7 +57,7 @@ export default function ProjectCard({
             <h3
               className={`text-3xl text-gray-100 md:text-4xl font-bold ${V2.className}`}
             >
-              Project <span className="text-primary-400">{project.name}</span>
+              {project.name}
             </h3>
             <div className="text-primary-400 text-sm hidden md:block">
               {(index + 1).toString().padStart(2, "0")}
