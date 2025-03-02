@@ -8,12 +8,11 @@ const nextConfig = {
             "res.cloudinary.com",
         ],
         minimumCacheTTL: 60,
-        formats: ['image/webp'], // Prefer WebP for better performance
+        formats: ['image/webp'],
     },
     
     experimental: {
         optimizePackageImports: ['@/components'],
-        serverActions: true,
     },
 
     headers: async () => {
@@ -43,12 +42,6 @@ const nextConfig = {
     },
     
     swcMinify: true,
-
-    compiler: {
-        removeConsole: process.env.NODE_ENV === "production" ? {
-            exclude: ['error', 'warn'],
-        } : false,
-    },
     
     reactStrictMode: true,
 };

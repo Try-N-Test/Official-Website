@@ -57,14 +57,15 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-capable": "yes",
     "mobile-web-app-capable": "yes",
   },
-  themeColor: "#2DB7B9",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
   category: "technology",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#2DB7B9",
 };
 
 export default function RootLayout({
