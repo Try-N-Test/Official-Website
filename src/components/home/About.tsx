@@ -6,7 +6,7 @@ const About = () => {
       id="about"
       className="w-[90vw] m-auto mb-28 lg:px-20 lg:py-16 bg-primary-950 border-primary-500 border-[3px] border-solid lg:rounded-3xl rounded-xl grid grid-cols-1 lg:grid-cols-12 lg:gap-14 gap-8 text-center lg:text-left px-6 py-8 max-w-7xl"
     >
-      <div className="lg:col-span-5 max-w-5xl rounded-xl min-h-80">
+      <div className="lg:col-span-5 max-w-5xl rounded-xl min-h-48 md:min-h-80">
         <Slider />
       </div>
 
