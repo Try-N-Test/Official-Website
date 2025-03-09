@@ -21,6 +21,28 @@ export const metadata: Metadata = {
   },
   description:
     "Premium web development services by an expert team. We build custom websites, apps and digital solutions while nurturing a vibrant developer community.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://tryntest.in",
+    title: "Try N Test Foundation | Expert Web Solutions & Developer Community",
+    description: "Premium web development services by an expert team. We build custom websites, apps and digital solutions while nurturing a vibrant developer community.",
+    siteName: "Try N Test Foundation",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Try N Test Foundation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Try N Test Foundation | Expert Web Solutions & Developer Community",
+    description: "Premium web development services by an expert team. We build custom websites, apps and digital solutions while nurturing a vibrant developer community.",
+    images: ["/og-image.png"],
+  },
   keywords: [
     "Web Development",
     "Web Design",

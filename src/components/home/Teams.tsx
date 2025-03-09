@@ -70,7 +70,7 @@ const Teams = () => {
     {
       image: Isheta,
       name: "Isheta Aggarwal",
-      designation: "UI/UX Designer & Content Writer",
+      designation: "UI/UX Designer & Interface Developer",
       href: "https://github.com/Isheta20"
     },
     {
@@ -82,13 +82,13 @@ const Teams = () => {
     {
       image: Kislay,
       name: "Kislay Gupta",
-      designation: "Front End Developer & Mobile Developer",
+      designation: "Mobile Developer & Front End Developer ",
       href: "https://github.com/kislay-gupta"
     },
     {
       image: Ankit,
       name: "Ankit Panigrahi",
-      designation: "Devops Engineer & ML Programmer",
+      designation: "Devops Engineer & AI Enthusiast",
       href: "https://github.com/PanigrahiAnkit"
     },
   ];
