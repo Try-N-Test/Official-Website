@@ -10,7 +10,6 @@ import { Autoplay, Navigation, EffectCreative } from "swiper/modules";
 import Image from "next/image";
 import about1 from "@/assets/About/about1.jpg";
 import about2 from "@/assets/About/about2.jpg";
-import about3 from "@/assets/About/about3.jpg";
 
 import "@/styles/style.css";
 
@@ -19,7 +18,6 @@ const Slider = () => {
   const images = [
     { src: about1, alt: "About image 1" },
     { src: about2, alt: "About image 2" },
-    { src: about3, alt: "About image 3" },
   ];
 
   return (

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
+import Script from "next/script";
 
 const monaSans = localFont({
   src: "./fonts/Mona-Sans.ttf",
@@ -20,6 +21,28 @@ export const metadata: Metadata = {
   },
   description:
     "Premium web development services by an expert team. We build custom websites, apps and digital solutions while nurturing a vibrant developer community.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://tryntest.in",
+    title: "Try N Test Foundation | Expert Web Solutions & Developer Community",
+    description: "Premium web development services by an expert team. We build custom websites, apps and digital solutions while nurturing a vibrant developer community.",
+    siteName: "Try N Test Foundation",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Try N Test Foundation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Try N Test Foundation | Expert Web Solutions & Developer Community",
+    description: "Premium web development services by an expert team. We build custom websites, apps and digital solutions while nurturing a vibrant developer community.",
+    images: ["/og-image.png"],
+  },
   keywords: [
     "Web Development",
     "Web Design",
@@ -38,7 +61,6 @@ export const metadata: Metadata = {
     telephone: true,
   },
   icons: {
-    icon: "/icons/favicon.ico",
     shortcut: "/icons/favicon-16x16.png",
     apple: "/icons/apple-touch-icon.png",
     other: {
@@ -120,6 +142,20 @@ export default function RootLayout({
         />
       </head>
       <body className={`${monaSans.className} antialiased`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-B7DL22KHJN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B7DL22KHJN');
+          `}
+        </Script>
+        
         <NavBar />
         {children}
         <Footer />
