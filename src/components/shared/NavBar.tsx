@@ -12,7 +12,7 @@ const NavBar = () => {
     { name: "About", href: "/#about" },
     { name: "Team", href: "/#team" },
     { name: "Journey", href: "/#journey" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const containerVariants = {
