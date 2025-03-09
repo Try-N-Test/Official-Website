@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="relative bg-background">
+    <div className="relative bg-background overflow-hidden">
       {/* Right Logo - Absolutely Positioned */}
       <MotionDiv
         className="hidden md:absolute -top-16 -right-64 h-[700px] w-[700px] z-20 lg:block"

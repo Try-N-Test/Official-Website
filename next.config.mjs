@@ -2,13 +2,21 @@
 const nextConfig = {
     images: {
         unoptimized: false,
-        domains: [
-            "images.unsplash.com",
-            "tryntest.in",
-            "res.cloudinary.com",
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'tryntest.in',
+            },
+            {
+                protocol: 'https',
+                hostname: 'res.cloudinary.com',
+            },
         ],
         minimumCacheTTL: 60,
-        formats: ['image/webp'],
     },
     
     experimental: {
